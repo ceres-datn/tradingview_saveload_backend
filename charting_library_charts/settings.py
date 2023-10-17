@@ -14,14 +14,22 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
+	#'default': {
+	#	'ENGINE': 'django.db.backends.postgresql_psycopg2',
+	#	'NAME': os.getenv('DB_NAME', 'charting_library'),
+	#	'USER': os.getenv('DB_USER', 'postgres'),
+	#	'PASSWORD': os.getenv('DB_PASSWORD', 'postgres'),
+	#	'HOST': os.getenv('DB_HOST', 'localhost'),
+	#	'PORT': int(os.getenv('DB_PORT', '5432')),
+	#},
 	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'NAME': os.getenv('DB_NAME', 'charting_library'),
-		'USER': os.getenv('DB_USER', 'postgres'),
-		'PASSWORD': os.getenv('DB_PASSWORD', 'postgres'),
-		'HOST': os.getenv('DB_HOST', 'localhost'),
-		'PORT': int(os.getenv('DB_PORT', '5432')),
-	}
+	        'ENGINE': 'django.db.backends.mysql',
+	        'NAME': 'mydb',
+	        'USER': 'root',
+	        'PASSWORD': 'admin',
+	        'HOST':'localhost',
+	        'PORT':'3306',
+	},
 }
 
 
